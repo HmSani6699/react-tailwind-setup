@@ -1,4 +1,5 @@
 import './App.css'
+import Dashboard from './component/Dashboard/Dashboard'
 import Header from './component/Header/Header'
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
-      <h1>Welcome to tailwind css</h1>
+      <h1 className='text-4xl text-center font-bold mt-8 underline'>This is Dashboard container</h1>
+      <Dashboard></Dashboard>
     </div>
   )
 }
