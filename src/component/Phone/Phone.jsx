@@ -13,16 +13,22 @@ const Phone = () => {
     axios.get('https://openapi.programming-hero.com/api/phones?search=iphone')
         .then(data => {
             const loadData = data.data.data;
-            const prosseing = loadData.map(phone => {
+            const dataProssesing = loadData.map(phone => {
                 const slug = phone.slug.split('-');
-                const price = slug[1];
+                const price = parseInt(slug[1]);
                 const newPhone = {
+                    brand: phone.brand,
+                    name: phone.phone_name,
+                    image: phone.image,
+                    slug: slug,
+                    price: price
                 }
+
             })
         })
+    // console.log(phones);
     return (
         <div>
-
         </div>
     );
 };
